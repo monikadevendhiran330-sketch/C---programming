@@ -1,0 +1,60 @@
+Patient Name Verification Using Strings
+Question: A hospital wants to check whether a patient's entered name matches a registered name. Write a C program using strings.
+
+ Algorithm:
+
+1.Start.
+2.Read the registered patient name.
+3.Read the entered patient name.
+4.Compare both names using strcmp().
+5.If both names are equal, display Name Matched.
+6.Otherwise, display Name Not Matched.
+7.Stop.
+
+
+
+
+Flow chart:
+
+
+START
+↓
+Enter registered patient name
+↓
+Enter entered patient name
+↓
+Compare both names using strcmp()
+↓
+Are both names equal?
+↙ ↘
+Yes No
+↓ ↓
+Name Matched Name Not Matched
+↘ ↙
+↓
+STOP
+
+
+C program:
+
+#include <stdio.h>
+
+struct Patient {
+int id;
+char name[50];
+int age;
+};
+
+int main() {
+struct Patient p;
+
+scanf("%d", &p.id);
+scanf("%49s", p.name);
+scanf("%d", &p.age);
+
+printf("Patient ID = %d\n", p.id);
+printf("Patient Name = %s\n", p.name);
+printf("Patient Age = %d", p.age);
+
+return 0;
+}
